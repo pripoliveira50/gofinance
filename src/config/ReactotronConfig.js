@@ -1,13 +1,16 @@
+import { NativeModules } from 'react-native';
 import Reactotron from 'reactotron-react-native';
-import { AsyncStorage } from '@react-native-community/async-storage';
 
 if (__DEV__) {
-  const tron = Reactotron.configure()
-    .useReactNative()
-    .setAsyncStorageHandler(AsyncStorage)
+  const { scriptURL } = NativeModules.SourceCode;
+  const scriptHostname = scriptURL.split('://')[1].split(':')[0];
+  const tron = Reactotron.configure({ host: scriptHostname })
+    .useReactNative({
+      networking: {
+        ignoreUrls: /symbolicate/,
+      },
+    })
     .connect();
 
   console.tron = tron;
-
-  tron.clear();
 }
