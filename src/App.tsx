@@ -1,8 +1,31 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components/native';
+import AppLoading from 'expo-app-loading';
 
-import '@config/ReactotronConfig';
+import {
+  useFonts,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_700Bold,
+} from '@expo-google-fonts/poppins';
+
+import theme from '@global/styles/theme';
 import { Dashboard } from '@screens/Dashboard';
 
+import '@config/ReactotronConfig';
+
 export default function App() {
-  return <Dashboard />;
+  const [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_700Bold,
+  });
+
+  if (!fontsLoaded) return <AppLoading />;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Dashboard />
+    </ThemeProvider>
+  );
 }

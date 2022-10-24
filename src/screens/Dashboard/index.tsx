@@ -5,8 +5,8 @@ import * as S from './styles';
 
 export const Dashboard = () => {
   return (
-    <View>
+    <S.Container>
       <Text>Hello World</Text>
-    </View>
+    </S.Container>
   );
 };
