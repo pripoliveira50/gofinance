@@ -5,7 +5,7 @@ import * as S from './styles';
 
 export const Dashboard = () => {
   return (
-    <View style={S.container}>
+    <View>
       <Text>Hello World</Text>
     </View>
   );
