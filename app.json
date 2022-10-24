@@ -3,8 +3,18 @@
     "name": "gofinance",
     "slug": "gofinance",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "extra": {
+      "eas": {
+        "projectId": "e04221c3-d8fd-449d-8793-eef60622d4c4"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "android": {},
+    "ios": {},
+    "package": "com.pri.gofinance",
+    "updates": {
+      "url": "https://u.expo.dev/e04221c3-d8fd-449d-8793-eef60622d4c4"
+    }
   }
 }
