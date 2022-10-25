@@ -14,7 +14,6 @@
       "eslint --fix",
       "yarn prettier --write",
       "yarn ts-prune --error --ignore '(utils)|(src/@types)'",
-      "cross-env CI=true yarn test --bail --findRelatedTests",
       "git add"
     ]
   },
@@ -27,8 +26,10 @@
   },
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.2.2",
+    "@expo/vector-icons": "^13.0.0",
     "@react-native-community/async-storage": "^1.12.1",
     "eas-cli": "^2.4.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "expo": "~46.0.16",
     "expo-app-loading": "~2.1.0",
     "expo-font": "~10.2.0",
@@ -38,9 +39,11 @@
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",
+    "react-native-responsive-fontsize": "^0.5.1",
     "react-native-web": "~0.18.7",
     "reactotron-react-native": "^5.0.3",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "ts-prune": "^0.10.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -59,10 +62,13 @@
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-native": "^4.0.0",
+    "eslint-plugin-unicorn": "^44.0.2",
     "husky": "^8.0.1",
     "init": "0.1.2",
     "lint-staged": "^13.0.3",

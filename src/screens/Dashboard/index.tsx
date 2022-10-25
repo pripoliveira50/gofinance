@@ -1,12 +1,17 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+
+import { Card } from '@components/Card';
+import { Header } from '@components/Header';
 
 import * as S from './styles';
 
-export const Dashboard = () => {
+export const Dashboard: React.FC = () => {
   return (
     <S.Container>
-      <Text>Hello World</Text>
+      <Header />
+      <S.Cards horizontal>
+        <Card />
+      </S.Cards>
     </S.Container>
   );
 };
