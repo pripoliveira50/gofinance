@@ -13,7 +13,7 @@ export const Container = styled.View`
 export const UserWrapper = styled.View`
   flex-grow: 1;
   padding: 0 ${metrics.triplePixel - 4}px;
-  margin-top: ${metrics.fourFoldPixel - 4}px;
+  margin-top: ${RFPercentage(-16)}px;
 
   flex-direction: row;
   justify-content: space-between;

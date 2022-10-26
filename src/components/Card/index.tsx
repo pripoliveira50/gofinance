@@ -1,18 +1,24 @@
 import React from 'react';
 
 import * as S from './styles';
+import { CardProps, icon } from './types';
 
-export const Card: React.FC = () => {
+export const Card: React.FC<CardProps> = ({
+  type,
+  amount,
+  lastTransaction,
+  title,
+}) => {
   return (
-    <S.Container>
+    <S.Container type={type}>
       <S.Header>
-        <S.Title>Card Title</S.Title>
-        <S.Icon name="arrow-up-circle" />
+        <S.Title type={type}>{title}</S.Title>
+        <S.Icon name={icon[type]} type={type} />
       </S.Header>
 
       <S.Content>
-        <S.Amount>R$ 17.400,00</S.Amount>
-        <S.LastTransaction>Última entrada dia 13 de abril</S.LastTransaction>
+        <S.Amount type={type}>{amount}</S.Amount>
+        <S.LastTransaction type={type}>{lastTransaction}</S.LastTransaction>
       </S.Content>
     </S.Container>
   );
