@@ -1,4 +1,4 @@
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) ![Badge](https://img.shields.io/badge/Husky-friendly-%237159c1?style=for-the-badge&logo=ghost)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) ![Husk friendly](https://img.shields.io/badge/Husky-friendly-%237159c1?style=for-the-badge&logo=ghost)
 
 
 # gofinance
