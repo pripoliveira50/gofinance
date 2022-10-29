@@ -7,7 +7,7 @@ Application that aims to choose your mood based on emoticons.
 
 ## Run and clone this project
 
-[x]git clone (ssh or HTTPS)
+[x] git clone (ssh or HTTPS)
 
 ```
 $ yarn install --foce
