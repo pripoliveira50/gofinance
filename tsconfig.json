@@ -6,7 +6,13 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@screens/*": ["src/screens/*"],
-      "@config/*": ["src/config/*"]
+      "@config/*": ["src/config/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@assets/*": ["src/assets/*"],
+      "@global/*": ["src/global/*"],
+      "@servics/*": ["src/services/*"],
+      "@navigation/*": ["src/navigation/*"]
     }
   }
 }
