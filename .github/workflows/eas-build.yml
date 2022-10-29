@@ -1,6 +1,6 @@
 name: EAS Build - Go finance
 on:
-  workflow_dispatch:
+  workflow_dispatch: [pull_request]
   push:
     branches:
       - main
@@ -40,4 +40,4 @@ jobs:
         run: yarn install --immutable
 
       - name: Build on EAS
-        run: eas build --platform all --profile development
+        run: eas build --android --profile development
