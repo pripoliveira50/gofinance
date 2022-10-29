@@ -1,27 +1,43 @@
-name: EAS Build
+name: EAS Build - Go finance
 on:
-  workflow_dispatch:
+  workflow_dispatch: [pull_request]
   push:
     branches:
       - main
 jobs:
-  build:
-    name: Install and build
+  update:
+    name: EAS Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
           node-version: 16.x
           cache: yarn
-      - name: Setup Expo and EAS
+
+      - name: Setup Expo
         uses: expo/expo-github-action@v7
         with:
-          expo-version: 5.x
-          expo-cache: true
+          expo-version: latest
           eas-version: latest
           token: ${{ secrets.EAS_BUILD }}
+
+      - name: Find yarn cache
+        id: yarn-cache-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+
       - name: Install dependencies
         run: yarn install --immutable
+
       - name: Build on EAS
         run: eas build --platform all --profile development
