@@ -1,4 +1,4 @@
-name: update EAS
+name: update EAS - Go finance
 on:
   workflow_dispatch:
   push:
