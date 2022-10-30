@@ -13,7 +13,6 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "yarn prettier --write",
-      "yarn ts-prune --error --ignore '(utils)|(src/@types)'",
       "git add"
     ]
   },
