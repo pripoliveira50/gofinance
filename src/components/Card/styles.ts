@@ -11,7 +11,7 @@ export const Container = styled.View<TypeProps>`
   border-radius: ${metrics.pixel - 3}px;
 
   padding: ${(metrics.doublePixel + 3, metrics.triplePixel)}px;
-  padding-bottom: ${RFValue(42)}px;
+  padding-bottom: ${RFValue(50)}px;
   margin-right: ${metrics.doublePixel}px;
 
   background-color: ${({ theme, type }) =>
@@ -56,8 +56,6 @@ export const Content = styled.View``;
 export const Amount = styled.Text<TypeProps>`
   font-family: ${({ theme }) => theme.fonts.medium};
   font-size: ${RFValue(32)}px;
-
-  margin-top: ${metrics.fiveFoldPixel - 4}px;
 
   color: ${({ theme, type }) =>
     type === `total` ? theme.colors.shape : theme.colors.text_dark};

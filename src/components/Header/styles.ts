@@ -5,7 +5,7 @@ import styled from 'styled-components/native';
 import { metrics } from '@global/index';
 
 export const Container = styled.View`
-  height: ${RFPercentage(42)}px;
+  height: ${RFPercentage(35)}px;
 
   background: ${({ theme }) => theme.colors.primary};
 `;
@@ -13,7 +13,7 @@ export const Container = styled.View`
 export const UserWrapper = styled.View`
   flex-grow: 1;
   padding: 0 ${metrics.triplePixel - 4}px;
-  margin-top: ${RFPercentage(-16)}px;
+  margin-top: ${RFPercentage(-10)}px;
 
   flex-direction: row;
   justify-content: space-between;
