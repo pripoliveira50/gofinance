@@ -15,7 +15,7 @@ Application that aims to choose your mood based on emoticons.
 - [x] install libs node_modules
 
 ```
-$ yarn install --foce
+$ yarn install --force
 ```
 - [x]  (install lib in ios)
 ```
