@@ -5,7 +5,9 @@ export interface CardProps {
   type: 'up' | 'down' | 'total';
 }
 
-export type TypeProps = CardProps;
+export type TypeProps = {
+  type: 'up' | 'down' | 'total';
+};
 
 export const icon = {
   up: `arrow-up-circle`,

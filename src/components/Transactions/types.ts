@@ -16,4 +16,6 @@ export interface DataTransaction {
   data: TransactionProps;
 }
 
-export type TypeProps = TransactionProps;
+export type TypeProps = {
+  type: 'positive' | 'negative';
+};

@@ -1,3 +1,8 @@
+export const DATA_HEADER = {
+  userName: `Priscila`,
+  photo: `https://avatars.githubusercontent.com/u/42249540?v=4`,
+};
+
 export const DATA_CARD = [
   {
     type: `up`,

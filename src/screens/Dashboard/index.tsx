@@ -4,7 +4,7 @@ import { Card } from '@components/Card';
 import { Header } from '@components/Header';
 import { Transactions } from '@components/Transactions';
 
-import { DATA_CARD, DATA_TRANSACTION } from '@screens/mock';
+import { DATA_CARD, DATA_TRANSACTION, DATA_HEADER } from '@screens/mock';
 
 import * as S from './styles';
 import { CardListRenderType, TransactionListRenderType } from './types';
@@ -30,7 +30,11 @@ export const Dashboard: React.FC = () => {
 
   return (
     <S.Container>
-      <Header />
+      <Header
+        type="dashboard"
+        userName={DATA_HEADER.userName}
+        photo={DATA_HEADER.photo}
+      />
       <S.Cards data={DATA_CARD} renderItem={renderCard} />
       <S.TransactionContainer>
         <S.Title>Transações</S.Title>

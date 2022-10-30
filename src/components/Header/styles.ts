@@ -1,12 +1,22 @@
 import { Feather } from '@expo/vector-icons';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 import { metrics } from '@global/index';
 
-export const Container = styled.View`
-  height: ${RFPercentage(35)}px;
+import { TypeProps } from './types';
 
+export const Container = styled.View<TypeProps>`
+  ${({ type }) =>
+    type === `dashboard` &&
+    css`
+      height: ${RFPercentage(35)}px;
+    `}
+  ${({ type }) =>
+    type === `default` &&
+    css`
+      height: ${RFValue(105)}px;
+    `}
   background: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -51,4 +61,17 @@ export const UserName = styled.Text`
 export const Icon = styled(Feather)`
   color: ${({ theme }) => theme.colors.secondary};
   font-size: ${RFValue(20)}px;
+`;
+
+export const WrapperHeader = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: ${metrics.doublePixel + 3}px;
+`;
+
+export const Title = styled.Text`
+  color: ${({ theme }) => theme.colors.shape};
+  font-size: ${RFValue(18)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
 `;
