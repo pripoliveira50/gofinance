@@ -1,5 +1,13 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View``;
+import metrics from '@global/metrics';
 
-export const Title = styled.Text``;
+export const Container = styled.View`
+  flex: 1;
+  background-color: ${({ theme }) => theme.colors.background};
+
+  padding: ${metrics.triplePixel}px;
+  justify-content: space-between;
+`;
+
+export const Fields = styled.View``;
