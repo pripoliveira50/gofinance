@@ -42,7 +42,7 @@ export const Title = styled.Text`
 export const TransactionList = styled.FlatList.attrs({
   showsVerticalScrollIndicator: false,
   keyExtractor: (item: object, index: number) => `${item}-${index}`,
-  contentContainerStyle: { paddingBottom: `${RFValue(20)}px` },
+  contentContainerStyle: { paddingBottom: 20 },
 })`
   margin-top: ${metrics.pixel}px;
   margin-bottom: ${RFValue(20)}px;
