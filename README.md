@@ -29,7 +29,7 @@ $ yarn start -c
 ## Clearing trash in Android
 
 ```
-$ del %appdata%\Temp\react-native- & cd android & gradlew clean & cd .. & del node_modules/ & yarn cache clean --force & yarn install & npm start -- --reset-cache
+$ del %appdata%\Temp\react-native- & cd android & gradlew clean & cd .. & del node_modules/ & yarn cache clean --force & yarn install & yarn start -- --reset-cache
 ```
 ```
 $ rm -rf node_modules && yarn cache clean --force && yarn install --force
