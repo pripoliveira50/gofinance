@@ -8,7 +8,7 @@ import AppLoading from 'expo-app-loading';
 import React from 'react';
 import { ThemeProvider } from 'styled-components/native';
 
-// import { Dashboard } from '@screens/Dashboard';
+import { Dashboard } from '@screens/Dashboard';
 import { Register } from '@screens/Register';
 
 import { theme } from '@global/index';
@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Register />
+      <Dashboard />
     </ThemeProvider>
   );
 }

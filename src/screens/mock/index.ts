@@ -5,13 +5,13 @@ export const DATA_HEADER = {
 
 export const DATA_CARD = [
   {
-    type: `up`,
+    type: `positive`,
     title: `Entradas`,
     amount: `R$ 17.400,00`,
     lastTransaction: `Última entrada dia 13 de abril`,
   },
   {
-    type: `down`,
+    type: `negative`,
     title: `Saídas`,
     amount: `R$ 1.259,00`,
     lastTransaction: `Última saída dia 03 de abril`,

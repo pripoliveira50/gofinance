@@ -1,14 +1,10 @@
-import { Dimensions } from 'react-native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
 import metrics from '@global/metrics';
 
-const windowHeight = Dimensions.get(`window`).height;
-
 export const Container = styled.View`
-  height: 100%;
-
+  flex: 1;
   background: ${({ theme }) => theme.colors.background};
 `;
 
@@ -24,11 +20,10 @@ export const Cards = styled.FlatList.attrs({
 
 export const TransactionContainer = styled.View`
   flex: 1;
-  height: ${windowHeight};
   justify-content: center;
 
-  margin: 0 ${RFValue(16)}px;
-  margin-top: ${RFPercentage(10)}px;
+  margin: 0 ${RFValue(36)}px;
+  margin-top: ${RFPercentage(12)}px;
 
   z-index: -1;
 `;
@@ -45,5 +40,5 @@ export const TransactionList = styled.FlatList.attrs({
   contentContainerStyle: { paddingBottom: 20 },
 })`
   margin-top: ${metrics.pixel}px;
-  margin-bottom: ${RFValue(20)}px;
+  margin-bottom: ${RFValue(16)}px;
 `;

@@ -35,12 +35,12 @@ export const Icon = styled(Feather)<TypeProps>`
   font-size: ${RFValue(28)}px;
 
   ${({ type }) =>
-    type === `up` &&
+    type === `positive` &&
     css`
       color: ${({ theme }) => theme.colors.success};
     `}
   ${({ type }) =>
-    type === `down` &&
+    type === `negative` &&
     css`
       color: ${({ theme }) => theme.colors.attention};
     `}
